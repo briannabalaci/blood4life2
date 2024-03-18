@@ -6,8 +6,8 @@ plugins {
 }
 sonar {
     properties {
-        property "sonar.projectKey", "Blood4Life"
-        property "sonar.projectName", "Blood4Life"
+        property "sonar.projectKey", "Blood4Life2"
+        property "sonar.projectName", "Blood4Life2"
     }
 }
 
