@@ -1,0 +1,22 @@
+.text-area {
+    -fx-font-family: Ayuthaya;
+    -fx-font-size: 14;
+}
+
+.text-area .content {
+    -fx-background-color: #EEEBDD;
+}
+
+.text-area .scroll-bar {
+    -fx-background-color: #D8B6A4;
+}
+.text-area .scroll-pane {
+    -fx-background-color: #D8B6A4;
+}
+.text-area .arrow-button:hover {
+    -fx-background-color: #D8B6A4;
+}
+
+#errorsTextArea {
+    -fx-text-fill: #630000;
+}

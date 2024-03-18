@@ -1,0 +1,9 @@
+rootProject.name = 'Blood4Life'
+include 'Model'
+include 'Persistance'
+include 'Persistence'
+include 'Service'
+include 'Server'
+include 'Networking'
+include 'Client'
+

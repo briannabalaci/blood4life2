@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CellUserController">
+    <stylesheets>
+        <URL value="@/styles/cellUser-style.css" />
+    </stylesheets>
+    <children>
+        <Pane fx:id="userPane" layoutX="40.0">
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@./icons/users-red.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="62.0" layoutY="14.0" text="User's info">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="34.0" text="Name:">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userNameLabel" layoutX="110.0" layoutY="34.0" />
+                <Label layoutX="62.0" layoutY="54.0" text="CNP:">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userCNPLabel" layoutX="100.0" layoutY="54.0" />
+                <Label layoutX="62.0" layoutY="74.0" text="Email: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="patientEmailLabel" layoutX="110.0" layoutY="74.0" />
+                <Label layoutX="62.0" layoutY="94.0" text="Blood type: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userBloodTypeLabel" layoutX="140.0" layoutY="94.0" />
+                <Label layoutX="62.0" layoutY="114.0" text="Rh: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="134.0" text="Birthday: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="154.0" text="Gender: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="174.0" text="Height: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="194.0" text="Weight: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="214.0" text="Points: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userRhLabel" layoutX="90.0" layoutY="114.0" />
+                <Label fx:id="patientBirthdayLabel" layoutX="125.0" layoutY="134.0" />
+                <Label fx:id="patientGenderLabel" layoutX="120.0" layoutY="154.0" />
+                <Label fx:id="patientHeightLabel" layoutX="115.0" layoutY="174.0" />
+                <Label fx:id="patientWeightLabel" layoutX="115.0" layoutY="194.0" />
+                <Label fx:id="patientPointsLabel" layoutX="115.0" layoutY="214.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

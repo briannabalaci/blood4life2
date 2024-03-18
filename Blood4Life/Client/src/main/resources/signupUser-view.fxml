@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="500.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupUserController">
+   <stylesheets>
+      <URL value="@/styles/textAreas-style.css" />
+      <URL value="@/styles/backgrounds-style.css" />
+      <URL value="@/styles/textFields-style.css" />
+      <URL value="@/styles/labels-style.css" />
+      <URL value="@/styles/comboBoxes-style.css" />
+      <URL value="@/styles/datePickers-style.css" />
+      <URL value="@/styles/buttons-style.css" />
+   </stylesheets>
+   <children>
+      <TextField fx:id="firstNameTextField" layoutX="113.0" layoutY="102.0" prefHeight="25.0" prefWidth="213.0" promptText="First Name" />
+      <TextField fx:id="lastNameTextField" layoutX="413.0" layoutY="102.0" prefHeight="25.0" prefWidth="190.0" promptText="Last Name" />
+      <TextField fx:id="emailTextField" layoutX="111.0" layoutY="172.0" prefHeight="25.0" prefWidth="233.0" promptText="Complete your email address" />
+      <TextField fx:id="cnpTextField" layoutX="427.0" layoutY="172.0" prefHeight="25.0" prefWidth="176.0" promptText="Complete your CNP" />
+      <ComboBox fx:id="genderComboBox" layoutX="116.0" layoutY="246.0" prefHeight="25.0" prefWidth="127.0" promptText="Choose gender" />
+      <ComboBox fx:id="bloodTypeComboBox" layoutX="323.0" layoutY="247.0" prefHeight="25.0" prefWidth="107.0" promptText="Blood Type" />
+      <ComboBox fx:id="rhComboBox" layoutX="487.0" layoutY="246.0" prefHeight="25.0" prefWidth="113.0" promptText="Choose Rh" />
+      <DatePicker fx:id="birthDatePicker" layoutX="111.0" layoutY="320.0" prefHeight="25.0" prefWidth="152.0" promptText="Pick your birth date" />
+      <TextField fx:id="heightTextField" layoutX="342.0" layoutY="321.0" prefHeight="25.0" prefWidth="101.0" promptText="Height (cm)" />
+      <TextField fx:id="weightTextField" layoutX="509.0" layoutY="321.0" prefHeight="25.0" prefWidth="95.0" promptText="Weight (kg)" />
+      <Button layoutX="448.0" layoutY="414.0" mnemonicParsing="false" onAction="#onSignUpUserButtonClick" prefHeight="45.0" prefWidth="101.0" text="Join our&#10;community!" textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label fx:id="signUpLabel" layoutX="289.0" layoutY="38.0" text="Signup">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="75.0" fitWidth="74.0" layoutX="355.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/blood_transfer.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="35.0" layoutY="451.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="27.0" prefWidth="50.0" text="Back" />
+      <Label fx:id="firstNameErrorLabel" layoutX="136.0" layoutY="136.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastNameErrorLabel" layoutX="417.0" layoutY="136.0" prefHeight="17.0" prefWidth="113.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="cnpErrorLabel" layoutX="434.0" layoutY="206.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailErrorLabel" layoutX="122.0" layoutY="206.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="heightErrorLabel" layoutX="331.0" layoutY="355.0" prefHeight="17.0" prefWidth="136.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="weightErrorLabel" layoutX="476.0" layoutY="355.0" prefHeight="17.0" prefWidth="136.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="birthDateErrorLabel" layoutX="111.0" layoutY="350.0" prefHeight="45.0" prefWidth="163.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="genderErrorLabel" layoutX="111.0" layoutY="278.0" prefHeight="17.0" prefWidth="136.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="bloodTypeErrorLabel" layoutX="335.0" layoutY="278.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="rhErrorLabel" layoutX="504.0" layoutY="278.0" text="Label" textFill="#bc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="67.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/first_name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="353.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/last_name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="67.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/email_login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="371.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/cnp_login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="65.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/gender_signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="60.0" layoutX="262.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/blood_type_signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="444.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/rh_signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="67.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/date_signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="299.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/height_signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="462.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/weight_signup.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="errorTextArea" layoutX="103.0" layoutY="413.0" prefHeight="68.0" prefWidth="233.0" />
+   </children>
+</AnchorPane>

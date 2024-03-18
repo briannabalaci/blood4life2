@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd%22%3E">
+
+    <bean id="sessionFactory" class="org.hibernate.boot.MetadataSources"></bean>
+
+    <bean id = "addressRepository" class = "repository.AddressRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "adminRepository" class = "repository.AdminRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "appointmentRepository" class = "repository.AppointmentRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "donationCentreRepository" class = "repository.DonationCentreRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "patientRepository" class = "repository.PatientRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "userRepository" class = "repository.UserRepository">
+        <constructor-arg value = "sessionFactory"/>
+    </bean>
+    <bean id = "patientValidator" class="validator.PatientValidator"/>
+    <bean id = "addressValidator" class="validator.AddressValidator"/>
+    <bean id = "donationCentreValidator" class="validator.DonationCentreValidator">
+            <constructor-arg value = "addressValidator"/>
+    </bean>
+
+    <bean id = "server" class="server.Service">
+        <constructor-arg ref = "userRepository"/>
+        <constructor-arg ref = "appointmentRepository"/>
+        <constructor-arg ref = "donationCentreRepository"/>
+        <constructor-arg ref = "patientRepository"/>
+        <constructor-arg ref = "addressRepository"/>
+        <constructor-arg ref = "patientValidator"/>
+        <constructor-arg ref = "donationCentreValidator"/>
+    </bean>
+</beans>

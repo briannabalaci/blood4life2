@@ -1,0 +1,9 @@
+#appointmentPane {
+    -fx-border-radius: 10%;
+    -fx-padding: 5;
+    -fx-border-color: #630000;
+    -fx-alignment: center;
+    -fx-background-color: #D8B6A4;
+    -fx-background-radius: 10%;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}

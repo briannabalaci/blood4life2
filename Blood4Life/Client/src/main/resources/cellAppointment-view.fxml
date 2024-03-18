@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CellAppointmentController">
+    <stylesheets>
+        <URL value="@/styles/cellAppointment-style.css" />
+    </stylesheets>
+    <children>
+        <Pane fx:id="appointmentPane" layoutX="40.0" prefHeight="221.0" prefWidth="224.0">
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@./icons/users-red.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@./icons/patients-red.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@./icons/donationCentres-red.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@./icons/appointments-red.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="62.0" layoutY="14.0" text="User's info">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="34.0" text="CNP:">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="userCNPLabel" layoutX="100.0" layoutY="34.0" />
+                <Label layoutX="62.0" layoutY="64.0" text="Patient's info">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="84.0" text="CNP:">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="patientCNPLabel" layoutX="100.0" layoutY="84.0" />
+                <Label layoutX="62.0" layoutY="114.0" text="Donation centre's info">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="134.0" text="Name: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="donationCentreNameLabel" layoutX="110.0" layoutY="134.0" />
+                <Label layoutX="62.0" layoutY="164.0" text="Appointment's info">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="184.0" text="Date: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="62.0" layoutY="204.0" text="Hour: ">
+                    <font>
+                        <Font name="Arial Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label fx:id="appointmentDateLabel" layoutX="100.0" layoutY="184.0" />
+                <Label fx:id="appointmentTimeLabel" layoutX="100.0" layoutY="204.0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

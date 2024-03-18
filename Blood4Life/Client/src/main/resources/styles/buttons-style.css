@@ -1,0 +1,79 @@
+#addPatientButton {
+    -fx-background-image: url("../icons/addPatient-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#addDonationCentreButton {
+    -fx-background-image: url("../icons/addDonationCentre-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showAppointmentsButton, #showFutureAppointmentsButton {
+    -fx-background-image: url("../icons/appointments-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showPastAppointmentsButton {
+    -fx-background-image: url("../icons/appointments-past.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#logoutButton, #logoutAdminButton {
+    -fx-background-image: url("../icons/logout.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showDonationCentresButton {
+    -fx-background-image: url("../icons/donationCentres-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showPatientsButton {
+    -fx-background-image: url("../icons/patients-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showUsersButton {
+    -fx-background-image: url("../icons/users-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#showProfileButton {
+    -fx-background-image: url("../icons/users-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+#createAppointmentButton {
+    -fx-background-image: url("../icons/addDonationCentre-red.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 48;
+    -fx-pref-width: 48;
+}
+
+.button {
+    -fx-background-size: 100% 100%;
+    -fx-background-color: linear-gradient(#D8B6A4, #630000);
+    -fx-border-radius: 20%;
+    -fx-font-family: Ayuthaya;
+    -fx-font-size: 14;
+    -fx-text-fill: #EEEBDD;
+    -fx-alignment: center;
+}

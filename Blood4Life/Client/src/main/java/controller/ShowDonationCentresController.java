@@ -1,0 +1,107 @@
+package controller;
+
+import domain.Address;
+import domain.DonationCentre;
+import domain.Patient;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.scene.control.Pagination;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
+import javafx.util.Callback;
+import service.ServiceInterface;
+
+import java.io.IOException;
+import java.net.URL;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.stream.Collectors;
+
+public class ShowDonationCentresController implements Initializable {
+    public AnchorPane root;
+    public Pagination pagination;
+    private ServiceInterface service;
+    private List<DonationCentre> donationCentres;
+
+    public void setService(ServiceInterface service) {
+        this.service = service;
+        getDonationCentres();
+    }
+
+    private void getDonationCentres() {
+        donationCentres = service.findAllDonationCentres();
+        root.getChildren().remove(pagination);
+        int pageSize = 4;
+        int donationCentresNumber = donationCentres.size();
+        int pagesNumber = donationCentresNumber % pageSize != 0 ? (donationCentresNumber/pageSize + 1) : donationCentresNumber/pageSize;
+        if(pagesNumber == 0){
+            Label label = new Label("No donation centres to show");
+            label.setLayoutX(250);
+            label.setLayoutY(150);
+            label.setFont(Font.font("Arial"));
+            label.setStyle("-fx-font-weight: bold; -fx-font-size: 18;");
+            root.getChildren().add(label);
+        }
+        else{
+            pagination = new Pagination(pagesNumber, 0);
+            pagination.setLayoutX(20.0);
+            pagination.setLayoutY(10.0);
+            pagination.setPrefWidth(760);
+            pagination.setPrefHeight(540);
+            pagination.setPageFactory(new Callback<Integer, Node>() {
+                @Override
+                public Node call(Integer pageIndex) {
+                    if (pageIndex >= pagesNumber) {
+                        return null;
+                    } else {
+                        return createPage(pageIndex);
+                    }
+                }
+            });
+            root.getChildren().add(pagination);
+        }
+    }
+
+    private GridPane createPage(Integer pageIndex){
+        GridPane pane = new GridPane();
+        pane.setPrefWidth(740);
+        pane.setPrefHeight(540);
+
+        List<DonationCentre> currentDonationCentres = donationCentres.stream()
+                .skip(pageIndex  * 4)
+                .limit(4)
+                .collect(Collectors.toList());
+
+        for (int i = 0; i < currentDonationCentres.size(); i++) {
+            DonationCentre donationCentre = currentDonationCentres.get(i);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../cellDonationCentre-view.fxml"));
+            try {
+                Pane view = fxmlLoader.load();
+                CellDonationCentreController cellDonationCentreController = fxmlLoader.getController();
+                cellDonationCentreController.setDonationCentre(donationCentre);
+                pane.add(view, 2 * (i / 2), i % 2);
+            } catch (IOException ioException) {
+                System.out.println(ioException.getMessage());
+            }
+        }
+        return pane;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+}
